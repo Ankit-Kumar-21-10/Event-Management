@@ -1,0 +1,59 @@
+/* Dashboard Layout */
+.dashboard-container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #070F2B; /* Dark background */
+  color: #E8E8E8; /* Light text */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #E8E8E8; /* Light color for the title */
+}
+
+/* Event Card Style */
+.dashboard-event-card {
+  background-color: #1B1A55; /* Dark purple background for card */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-event-name {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #E8E8E8;
+}
+
+.dashboard-event-description,
+.dashboard-event-location {
+  font-size: 1.1em;
+  color: #B4B4D3; /* Slightly lighter text for description */
+}
+
+/* Progress Bar Container */
+.dashboard-progress-bar-container {
+  width: 100%;
+  height: 20px; /* Adjusted height for visibility */
+  background-color: #B4B4D3; /* Light background for the container */
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* Progress Bar Style */
+.dashboard-progress-bar {
+  height: 100%;
+  width: 0%; /* Default width */
+  background-color: #6a1b9a; /* Dark purple color */
+  border-radius: 10px; /* Rounded corners for progress */
+  transition: width 0.5s ease-in-out; /* Smooth transition when filling */
+}

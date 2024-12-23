@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.taskbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.taskbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.taskbar li {
+  margin-right: 15px;
+}
+
+.taskbar .auth-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.welcome-message {
+  color: white;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #ff4500;
+}
+
+.taskbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.taskbar a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* Your existing CSS (keep this) */
+.bg-darkest { background-color: #070F2B; }
+.bg-dark { background-color: #1B1A55; }
+.bg-medium { background-color: #5256C1; }
+.bg-light { background-color: #9290C3; }
+.text-lightest { color: #E8E8E8; }
+.text-medium { color: #5256C1; }
+
+.title-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.card-title-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.card-text-font {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}
+
+.event-card {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.form-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.button-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Dashboard-specific styles */
+.bg-darkest { background-color: #070F2B; }
+.bg-dark { background-color: #1B1A55; }
+.bg-medium { background-color: #5256C1; }
+.bg-light { background-color: #9290C3; }
+.text-lightest { color: #E8E8E8; }
+.text-medium { color: #5256C1; }
+.text-dark { color: #1B1A55; }
+
+/* Common Styles (for all pages) */
+.page-container {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page-content {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.title-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-title-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.card-text-font {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}
+
+/* Dashboard-Specific Styles */
+.dashboard .events-list { /* More specific selector */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dashboard .event-card { /* More specific selector */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.dashboard .progress-container {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #ddd; /* Light background for the progress bar container */
+  border-radius: 5px; /* Rounded corners for the container */
+  height: 20px; /* Fixed height for the container */
+  box-sizing: border-box;
+}
+
+.dashboard .progress-bar {
+  height: 100%; /* Full height of the container */
+  width: 0%; /* Initially, the progress bar is empty */
+  border-radius: 5px; /* Rounded corners for the progress bar */
+  background-color: #040006; /* Dark purple color for the progress bar */
+  transition: width 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.dashboard .progress-bar-fill { /* More specific selector */
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+/* EventManagement-Specific Styles */
+.event-management .event-form { /* More specific selector */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.event-management .input-field { /* More specific selector */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.event-management .events-display { /* More specific selector */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.event-management .event-card { /* More specific selector */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.event-management .button-container { /* More specific selector */
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.event-management .form-button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.event-management .form-button:hover {
+    background-color: #3f449a;
+}
+
+/* Attendee Management Specific Styles */
+.attendee-management .event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.attendee-management .input-field {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.attendee-management .events-display {
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.attendee-management .event-card {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.attendee-management .button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.attendee-management .form-button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.attendee-management .form-button:hover {
+    background-color: #3f449a;
+}
+
+/* Center the login box */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+/* Style the login box */
+.login-box {
+  width: 400px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Style the headings */
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Style the form inputs */
+.input-container {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #5c6bc0;
+  outline: none;
+}
+
+/* Style the login button */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #3f4b87;
+}
+
+/* Style the signup link */
+.signup-link {
+  margin-top: 15px;
+}
+
+.signup-link a {
+  color: #5c6bc0;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+/* Style the signup box */
+.signup-box {
+  width: 400px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Style the headings */
+.signup-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Style the form inputs */
+.input-container {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #5c6bc0;
+  outline: none;
+}
+
+/* Style the signup button */
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #3f4b87;
+}
+
+/* Style the login link */
+.login-link {
+  margin-top: 15px;
+}
+
+.login-link a {
+  color: #5c6bc0;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
